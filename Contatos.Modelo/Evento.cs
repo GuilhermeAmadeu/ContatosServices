@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Contatos.Modelo
 {
+    [Table(name:"Evento")]
     public class Evento
     {
         [Key]

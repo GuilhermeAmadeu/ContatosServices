@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Contatos.Modelo
 {
+    [Table(name: "Usuario")]
     public class Usuario
     {
         [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]

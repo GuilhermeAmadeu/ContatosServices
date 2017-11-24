@@ -10,7 +10,7 @@ namespace ContatosServices.Models
     public class ContatoContext:DbContext
     {
         public ContatoContext()
-            : base()
+            : base(Properties.Settings.Default.connContatos)
         {          
 
         }
