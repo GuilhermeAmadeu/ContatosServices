@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace ContatosServices.Controllers
 {
@@ -19,13 +20,19 @@ namespace ContatosServices.Controllers
             var lista = db.Usuarios;
             return lista;
         }
-
+        
         // GET: api/Usuario/5
-        public string Get(int id)
+        [ResponseType(typeof(Usuario))]
+        public IHttpActionResult Get(int id)
         {
-            return "value";
+            var item = db.Usuarios.FirstOrDefault(u => u.Id == id);
+            if(item == null)
+            {
+                return NotFound(); //http 404
+            }
+            return Ok(item); //http 200 Ok
         }
-
+        
         // POST: api/Usuario
         public void Post([FromBody]string value)
         {
