@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Contatos.Modelo
 {
-    class Pessoa
+    public class Pessoa
     {
         [Key]
         public Guid Id { get; set; }    
