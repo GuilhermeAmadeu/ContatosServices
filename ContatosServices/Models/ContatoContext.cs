@@ -9,8 +9,7 @@ namespace ContatosServices.Models
 {
     public class ContatoContext:DbContext
     {
-        public ContatoContext()
-            : base(Properties.Settings.Default.connContatos)
+        public ContatoContext() : base(Properties.Settings.Default.connContatos)
         {          
 
         }

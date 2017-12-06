@@ -57,6 +57,7 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Scripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Usuario.sql" />
@@ -65,5 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Contatos.Banco.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Usuario_Insert.sql" />
+    <None Include="Contatos.Banco.publish.xml" />
   </ItemGroup>
 </Project>
